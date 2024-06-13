@@ -1,0 +1,222 @@
+// footer section
+footer {
+  padding: 40px 0 0 0;
+  background-color: var(--light-surface-container);
+  border: 1px solid var(--light-outline-variant);
+  @media (max-width: 900px) {
+    padding: 40px 0 66px 0;
+  }
+  .flex-container {
+    display: grid;
+    grid-template-columns: 400px 200px 200px 200px;
+    gap: 40px;
+    justify-content: space-between;
+    @media (max-width: 1200px) {
+      grid-template-columns: 400px 200px 200px;
+    }
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+    justify-content: space-between;
+    .item {
+      .hubspot-form {
+        margin-top: 16px;
+        min-height: 248px;
+      }
+      .title {
+        margin-bottom: 16px;
+        color: var(--light-on-surface);
+      }
+      .nav {
+        li {
+          a {
+            text-decoration: none;
+            cursor: pointer;
+            color: var(--light-on-surface-variant);
+            display: block;
+            padding: 8px 0;
+            font-weight: 300;
+            letter-spacing: 0.05rem;
+            font-size: 1rem;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  .logo-section {
+    margin: 16px 0 0 0;
+    border-top: 1px solid var(--light-outline);
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .copyright-section {
+    margin-top: 8px;
+    border-top: 1px solid var(--light-outline-variant);
+    .columns {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      .links {
+        margin-bottom: 5px;
+        a {
+          font-size: var(--paragraphSize);
+          color: var(--grey);
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .copyright,
+    .agency {
+      font-size: 0.9rem;
+      color: var(--grey);
+    }
+  }
+}
+
+// arrow up
+/* arrow to the header */
+.go-to-header {
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  transform: translate(0, -50%);
+  z-index: 100;
+  background: var(--light-secondary);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: var(--boxShadow);
+}
+.go-to-header a {
+  display: inline-block;
+  line-height: 0;
+}
+
+.show {
+  display: flex !important;
+}
+.hide {
+  display: none;
+}
+
+// bottom navbar
+.bottom-nav-bar {
+  @media (min-width: 900px) {
+    display: none;
+  }
+  background: var(--beige);
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 6000;
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .item {
+      a {
+        p {
+          margin: 0 !important;
+          line-height: 0 !important;
+        }
+        span {
+          font-size: 0.8rem;
+        }
+        padding: 4px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+
+        text-decoration: none;
+        // width: 70px;
+      }
+    }
+    .mobile-nav-cart-wrapper {
+      .view-cart-wrapper {
+        position: relative;
+        .dynamic-count {
+          position: absolute;
+          top: -13px;
+          right: -13px;
+          background: var(--light-primary);
+          border-radius: 50%;
+          height: 20px;
+          width: 20px;
+          z-index: 2;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.7rem;
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+}
+.contact-info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  .svg-wrapper {
+    background-color: var(--light-on-surface-variant);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      line-height: 0;
+      font-size: 0;
+    }
+
+    svg {
+      height: 16px;
+      path {
+        fill: white;
+      }
+    }
+  }
+  .info {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: var(--light-on-surface-variant);
+      letter-spacing: 0.03rem;
+      font-weight: 300;
+    }
+  }
+}
